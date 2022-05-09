@@ -3,7 +3,6 @@
 #define ROW 3
 #define COL 3
 
-
 /**
  * main - creates and prints element of 2D array using for loop 
  * 
@@ -12,24 +11,20 @@
 
 int main(void)
 {
-    int arr[ROW][COL], row, col;
+    int arr[ROW][COL], i, j;
 
-    for (row = 0; row < ROW; row++)
+    for (i = 0; i < ROW; i++)
     {
-        for (col = 0; col < COL; col++)
+        for (j = 0; j < COL; j++)
         {
             printf("Enter the element of arr[%d][%d]: ", ROW, COL);
-            scanf("%d", &arr[row][col]);
+            scanf("%d", &arr[i][j]);
         }
     }
        
-    for (row = 0; row < ROW; row++)
-    {
-        for (col = 0; col < COL; col++)
-        {
-            printf("arr[%d][%d] = %d\n",  row, col, arr[row][col]);
-        }
-    }
+    for (i = 0; i < ROW; i++)
+        for (j = 0; j < COL; j++)
+            printf("arr[%d][%d] = %d\n",  i, j, arr[i][j]);
 
     printf("\n");
     return (0);
