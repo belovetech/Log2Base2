@@ -1,29 +1,30 @@
 #include <stdio.h>
 
 /**
- * _strchr - finds first occurence of a charcter in a string
+ * _strchr - locates first occurence of a character in a string
  * @str: string
  * @c: character to find
  * 
- * Return: position of the character
+ * Return: pointer to the character
  */
 
-int _strchr(char str[], char c)
+char *_strchr(char str[], int c)
 {
-    int pos;
+    int i;
 
-    for (pos = 0; str != NULL; pos++)
+    for (i = 0; str[i] != '\0'; i++)
     {
-        if (str[pos] == c)
-            return (pos);
+        if (str[i] == c)
+            return (&str[i]);
+        else
+            return (NULL);
     }
 }
 
 int main(void)
 {
     char str[20];
-    char chr;
-    int pos;
+    char chr, *pos;
 
     printf("Enter a string: ");
     fgets(str, 20, stdin);
@@ -32,6 +33,6 @@ int main(void)
     scanf("%c", &chr);
 
     pos = _strchr(str, chr);
-    printf("The first occurrence of %c in %s is at position %d\n", chr, str, pos);
+    printf("The first occurrence of %c in %s is at  %c\n", chr, str, *pos);
     return (0);
 }
