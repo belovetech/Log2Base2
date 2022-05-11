@@ -2,9 +2,9 @@
 #include <math.h>
 
 /**
- * struct point - point cordinates
- * @x: horizontal line
- * @y: vertical line
+ * struct point - point coordinates
+ * @x: x coordinates
+ * @y: y coordinates
  */
 struct point
 {
@@ -13,9 +13,9 @@ struct point
 };
 
 /**
- * struct line - line of point
- * @p1: line point 1
- * @p2: line point 2
+ * struct line - line coordinate
+ * @p1: coordinate 1
+ * @p2: coordinates 2
  */
 struct line
 {
@@ -27,15 +27,21 @@ struct line
  * main - calculate distance of two different cordinates 
  * 
  * Return: 0 always (success) 
- */
+ *
+ *calculate distance
+  *    /-----------------------
+  * __/(x2-x1)^2 + (y2-y1)^2
+  */
 int main(void)
 {
     float distance;
     struct line l;
-    
+
+    //get coordinate 1
     printf("Enter p1(x and y): ");
     scanf("%d %d", &l.p1.x, &l.p1.y);
-    
+
+    //get coordinate 2
     printf("Enter p2(x and y): ");
     scanf("%d %d", &l.p2.x, &l.p2.y);
 
