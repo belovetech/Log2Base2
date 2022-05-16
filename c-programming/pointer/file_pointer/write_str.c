@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define size 20
 /**
- * main - read from the file string by string
+ * main - writes to the file string by string
  *
  * Return: 0 always (success)
  */

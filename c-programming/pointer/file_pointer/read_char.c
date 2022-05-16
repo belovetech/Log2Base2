@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * main - read from the file character by character
+ * main - reads from the file character by character
  *
  * Return: 0 always (success)
  */
