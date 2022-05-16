@@ -1,5 +1,12 @@
 #include<stdio.h>
 
+/**
+ * struct employee - employee description
+ * @name: name of the employeee
+ * @age: price of the employeee
+ * @weight: weight of the employeee
+ */
+
 struct employee
 {
     char name[20];
@@ -22,8 +29,6 @@ int main(void)
   printf("ptr->name = %s\n", ptr->name);
   printf("ptr->age = %d\n", ptr->age);
   printf("ptr->weight = %.2f\n", ptr->weight);
-
-
 
     return 0;
 }
