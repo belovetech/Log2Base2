@@ -1,1 +1,1 @@
-# Log2Base2
+# Python excercise of Log2Base2
