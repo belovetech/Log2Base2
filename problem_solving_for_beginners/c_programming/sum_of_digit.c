@@ -1,22 +1,23 @@
 #include<stdio.h>
 /**
- * main - splits number
+ * main - sum of digit
  *
  * Return: 0 always (success)
  */
 int main(void)
 {
-    int num, res;
-    printf("Enter a number: ");
+    int num, sum, res;
+    printf("Enter a positive number: ");
     scanf("%d", &num);
 
     //Write your code here
     while (num >= 1)
     {
-        res =  num % 10;
-        printf("%d\n", res);
-        num = num / 10;
+      res = num % 10;
+      sum += res;
+      num = num / 10;
     }
     
+    printf("%d", sum);
     return 0;
 }
