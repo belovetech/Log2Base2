@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - sum of natural number O(N)
+ * main - sum of natural number O(1)
  *
  * Return: 0 always (success)
  */
@@ -11,14 +11,7 @@ int main(void)
     scanf("%d", &N);
 
     //Write your code here
-    int i;
-    sum = 0;
-    
-    if (N  <= 0)
-        return (N);
-
-    for (i = 1; i <= N; i++)
-        sum += i;
+    sum = (N * (N + 1)) / 2;
     
     printf("%d", sum);
     return 0;
