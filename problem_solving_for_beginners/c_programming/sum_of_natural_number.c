@@ -11,7 +11,7 @@ int main()
     sum = 0;
     
     if (N  <= 0)
-        return;
+        return (N);
 
     for (i = 1; i <= N; i++)
         sum += i;

@@ -2,10 +2,8 @@ N = int(input("Enter a number: "))
 #write your code here
 
 sum  = 0
-i = 1
-while (i <= N):
-    sum += i
-    i += 1
+for x in range(1, N+1, 1):
+    print(x)
+    sum += x
 
 print(sum)
-    
