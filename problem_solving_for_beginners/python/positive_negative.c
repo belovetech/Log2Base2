@@ -8,7 +8,7 @@
 int main(void)
 {
     int num;
-    printf("Enter a number: ");
+    printf("Enter a number: ")
     scanf("%d", &num);
 
     //Write your code here
