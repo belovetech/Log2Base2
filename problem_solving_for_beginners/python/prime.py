@@ -1,11 +1,10 @@
 # checks for a prime number 
 def isprime(num):
-    for i in range(2, num, 1):
+    flag = 0
+    for i in range(2, num):
         if num % i == 0:
             flag = 1
             break
-        else:
-            flag = 0
     return flag
 
 def print_prime(flag):

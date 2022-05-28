@@ -8,7 +8,7 @@
  */
 int isprime(int num)
 {
-    int i, flag;
+    int i, flag = 0;
 
     for (i = 2; i < num; i++)
     {
@@ -17,8 +17,6 @@ int isprime(int num)
             flag = 1;
             break;
         }
-        else
-            flag = 0;
     }
     return (flag);
 }
