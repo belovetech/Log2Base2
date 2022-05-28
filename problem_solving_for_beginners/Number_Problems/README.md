@@ -1,1 +1,1 @@
-# Number problems
+# Number problems solution in python and c programming language
