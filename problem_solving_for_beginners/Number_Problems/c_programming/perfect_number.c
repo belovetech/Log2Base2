@@ -1,16 +1,23 @@
 #include <stdio.h>
 #include <math.h>
-
+/**
+ * isperfect - checks for a perfect number
+ * 
+ * @num: number to check
+ * 
+ * Return: 0 (prime), 1 (Not Prime)
+ */
 int isperfect(int num)
 {
-    int  i, tmp, sqr, res = 1;
-     sqr = sqrt(num);
-    for (i = 2; i <= sqr; i++)
+    int  i, res = 1;
+    for (i = 2; i <= sqrt(num); i++)
     {
         if (num % i == 0)
         {
-            tmp = num / i;
-            res = res + i + tmp;
+            if (num / i == i)
+                res = res + i;
+            else
+                res = res + i + (num / i);
         }
     }
     return (res);
