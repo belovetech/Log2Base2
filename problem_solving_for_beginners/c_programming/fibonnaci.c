@@ -28,8 +28,6 @@ int main(void)
 
     fibonnaci(n);
     putchar(10);
-    fibonnaci2(n);
-    putchar(10);
 
     return 0;
 }
