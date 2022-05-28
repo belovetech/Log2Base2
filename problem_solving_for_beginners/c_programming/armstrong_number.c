@@ -37,6 +37,11 @@ void armstrong_number(int num)
         printf("Not Armstrong Number\n");
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: 0 always (success)
+ */
 int main(void)
 {
     int num;
