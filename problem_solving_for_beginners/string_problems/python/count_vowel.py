@@ -7,7 +7,7 @@ length = 0
 for i in str1:
 	length += 1
 #write your code here
-vowels = ['a', 'e', 'i', 'o', 'u']
+
 count = 0
 
 for ch in str1:
