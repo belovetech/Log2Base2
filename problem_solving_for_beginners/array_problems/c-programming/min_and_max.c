@@ -12,7 +12,7 @@ int main(void)
 
     for(i = 0; i < n; i++)
     {
-        printf("Enter the size of array: ");
+        printf("Enter the element of array: ");
         scanf("%d", &arr[i]);
     }
 
@@ -29,7 +29,6 @@ int main(void)
             min = arr[i];
     }
   
-    
     printf("Max = %d\nMin = %d\n", max, min);
   
     return 0;
