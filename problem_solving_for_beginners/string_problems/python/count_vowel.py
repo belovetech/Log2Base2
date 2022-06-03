@@ -11,8 +11,7 @@ vowels = ['a', 'e', 'i', 'o', 'u']
 count = 0
 
 for ch in str1:
-    for v in vowels:
-        if ch == v:
+    if ch == 'a' or ch == 'e' or ch == 'i' or ch == 'o' or ch == 'u':
             count += 1
 
 print(count)
