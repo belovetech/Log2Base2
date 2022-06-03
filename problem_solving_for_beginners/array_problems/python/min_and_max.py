@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Find min and max in elements of array"""
 arr = []
 n = int(input("Enter a size of array: "))
@@ -13,8 +14,7 @@ min = arr[0]
 for i in arr:
     if i > max:
         max = i
-
-for i in arr:
+        
     if i < min:
         min = i
 

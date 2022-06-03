@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - Find min and maxelements in array
+ * main - Find min and max elements in array
  *
  * Return: 0 Always (success)
  */
@@ -24,13 +24,11 @@ int main(void)
     {
         if (arr[i] > max)
             max = arr[i];
-    }
-    
-    for (i = 0; i < n; i++)
-    {
+            
         if (arr[i] < min)
             min = arr[i];
     }
+  
     
     printf("Max = %d\nMin = %d\n", max, min);
   
