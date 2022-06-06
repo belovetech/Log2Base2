@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include <stdlib.h>
-
+/**
+ * _len - Length of a string
+ * @str: string
+ */
 int _len(char *str)
 {
     int len = 0;
@@ -10,7 +13,10 @@ int _len(char *str)
 
 	return (len);
 }
-
+/**
+ * _reverse - Reverse string
+ * @str: string
+ */
 void _reverse(char *str)
 {
     int len, lastidx, i;
@@ -25,7 +31,10 @@ void _reverse(char *str)
         str[lastidx - i] = tmp;
     }
 }
-
+/**
+ * _reverse2 - Reverse string
+ * @str: string
+ */
 char  *_reverse2(char *str)
 {
     int len, lastidx, i, j = 0;
@@ -42,7 +51,10 @@ char  *_reverse2(char *str)
 
     return (rev_str);
 }
-
+/**
+ * main - Print reverse string
+ * Return: 0 always (success)
+ */
 int main(void)
 {
 	char str[10];
@@ -59,3 +71,4 @@ int main(void)
     reverse_str = NULL;
 	return 0;
 }
+

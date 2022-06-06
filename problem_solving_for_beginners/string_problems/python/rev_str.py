@@ -14,8 +14,15 @@ def rev_str(string):
         rev_str += string[-i]
     print(rev_str)
 
+def rev_str2(string):
+    """Reverse string"""
+    rev_str = str1[::-1]
+    print(rev_str)
+
+
 
 str1 = input("Enter a string: ")
 print(str1)
 rev_str(str1)
+rev_str2(str1)
 
