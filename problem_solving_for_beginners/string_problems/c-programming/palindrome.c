@@ -46,13 +46,37 @@ void palindrome(char *str)
     copy = NULL;
 }
 
+void palindrome2(char *str)
+{
+    int i, lastidx, len = 0, flag = 1;
+    
+    for (i = 0; str[len]; i++)
+        len++;
+        
+    lastidx = len - 1;
+    for (i = 0; i < len/2; i++)
+    {
+        if (str[i] != str[lastidx - i])
+        {
+            flag = 0;
+            break;
+        }
+    }
+    
+    if (flag == 1)
+        printf("Palindrome\n");
+    else
+        printf("Not Palindrome\n");
+}
+
 int main(void)
 {
 	char str[10];
 	printf("Enter a string: ");
 	scanf("%s", str);
 
-	//Write your code here
-	palindrome(str);
+
+// 	palindrome(str);
+	palindrome2(str);
 	return 0;
 }
