@@ -22,10 +22,22 @@ def palindrome(string):
     else:
         print("Not Palindrome")
 
+def palindrome2(string):
+    flag = 1
+    strlen = length(string)
+    lastidx = strlen - 1
+    for i in range(strlen//2):
+        if string[i] != string[lastidx - i]:
+            flag = 0
+            print("Non Palindrome")
+            break
+        else:
+            print("Palindrome")
 
 if __name__ == "__main__":
     str1 = input("Enter a string: ")
-palindrome(str1)
+    # palindrome(str1)
+    palindrome2(str1)
 
 
 
