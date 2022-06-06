@@ -4,8 +4,8 @@
  * _strcmp - Compares two strings
  * @str1: first string
  * @str2: seconf string
- * 
- * Return: Print Yes otherwise 
+ *
+ * Return: Print Yes otherwise
  */
 
 void _strcmp(char *str1, char *str2)
