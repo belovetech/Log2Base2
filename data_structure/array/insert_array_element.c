@@ -12,7 +12,7 @@
  *
  * Return: pointer to the array
  */
-void inserting_array_element(int *arr, int size, int pos, int element)
+void insert_array_element(int *arr, int size, int pos, int element)
 {
     int i;
 
@@ -75,7 +75,7 @@ int main(void)
     printf("Enter position and element to insert: ");
     scanf("%d %d", &pos, &value);
 
-    inserting_array_element(arr, size, pos, value);
+    insert_array_element(arr, size, pos, value);
 
      // update size and print after inserting new element
     size += 1;
