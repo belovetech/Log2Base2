@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 // Array size
 #define SIZE 100
 
@@ -10,20 +12,18 @@
  *
  * Return: pointer to the array
  */
-int *inserting_array_element(int *arr, int size, int pos, int val)
+void inserting_array_element(int *arr, int size, int pos, int element)
 {
     int i;
 
     // increment size by 1
     size += 1;
-
+    
     // shift element of array forward
     for (i = size; i > pos; i--)
         arr[i] = arr[i - 1];
 
-    arr[pos] = val;
-
-    return (arr);
+    arr[pos] = element;
 }
 
 /**
@@ -43,25 +43,46 @@ void print_array(int *arr, int size)
 }
 
 /**
+ * create_array_element - Creates array element
+ * @arr: Array
+ * @size: Size of array
+ */
+
+void create_array_element(int arr[], int size)
+{
+    int i;
+
+    printf("Enter element of array of %d\n", size);
+    for (i = 0; i < size; i++)
+        scanf("%d", &arr[i]);
+}
+
+/**
  * main - Entry point
  * Return: 0 always (success)
  */
 
 int main(void)
 {
-    int arr[SIZE] = {10, 20, 30, 40, 50};
-    int pos = 2;
-    int size = 5;
+    int size, arr[size], pos, value;
+
+    printf("Enter size of array: ");
+    scanf("%d", &size);
+
+    // Create array
+    create_array_element(arr, size);
 
     // print before inserting new element
     print_array(arr, size);
 
-    inserting_array_element(arr, size, pos, 15);
-    inserting_array_element(arr, size, pos, 20);
-    inserting_array_element(arr, size, 67, 25);
+    printf("Enter position and element to insert: ");
+    scanf("%d %d", &pos, &value);
 
-     // print after inserting new element
-    print_array(arr, 100);
+    inserting_array_element(arr, size, pos, value);
+
+     // update size and print after inserting new element
+    size += 1;
+    print_array(arr, size);
 
     return (0);
 }
