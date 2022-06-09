@@ -16,9 +16,6 @@ void inserting_array_element(int *arr, int size, int pos, int element)
 {
     int i;
 
-    // increment size by 1
-    size += 1;
-    
     // shift element of array forward
     for (i = size; i > pos; i--)
         arr[i] = arr[i - 1];
