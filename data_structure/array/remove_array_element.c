@@ -68,11 +68,11 @@ int main(void)
 
     print_array(arr, size);
 
-    // printf("Enter a key: ");
-    // scanf("%d", &key);
+    printf("Enter a key: ");
+    scanf("%d", &key);
 
     remove_element(arr, size, key);
-    // remove_mid(arr, size);
+    remove_mid(arr, size);
 
     print_array(arr, size-1);
 
