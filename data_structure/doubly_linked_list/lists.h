@@ -10,7 +10,7 @@ struct node
     struct node *next;
 };
 
-
-
+struct node *add_node_front(struct node **head, int val);
+int print_node(struct node *head);
 
 #endif /*LISTS_H*/

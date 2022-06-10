@@ -10,7 +10,7 @@ struct node
 
 int main()
 {
-   
+
     struct node *head, *mid, *last;
 
     head = malloc(sizeof(struct node));
@@ -31,7 +31,7 @@ int main()
 
     //Implement task 2 here
     struct node *temp;
-    
+
     temp = last;
 
     while(temp != NULL)
@@ -39,6 +39,6 @@ int main()
         printf("%d ", temp->data);
         temp = temp->prev;
     }
-    
+
     return 0;
 }
