@@ -1,5 +1,8 @@
 #include "lists.h"
-
+/**
+ * delete_node - Delete key in the linked list node
+ * @key: data to delete
+ */
 int delete_node(struct node **head, int key)
 {
     if (*head == NULL)
