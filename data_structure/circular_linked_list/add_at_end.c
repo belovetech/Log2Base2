@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_at_end1 - Inserting a node at the end of circular singly linked list
+ * insert_at_end1 - Insert a node at the end of circular singly linked list
  * @head: pointer to pointer
  * @val: data to add.
  *

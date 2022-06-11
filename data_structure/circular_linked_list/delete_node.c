@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * delete_node - Delete a node of circular singly linked list
+ * delete_node - Deletes a node of circular singly linked list
  * @head: pointer to pointer
  * @val: data to add.
  *

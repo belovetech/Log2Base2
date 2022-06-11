@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_at_beginning - Inserting a node in a beginning of circular doubly linked list
+ * insert_at_beginning1 - Inserts a node in a beginning of circular doubly linked list
  * @head: pointer to pointer
  * @val: data to add.
  *
