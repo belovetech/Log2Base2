@@ -10,7 +10,10 @@ struct node
     struct node *next;
 };
 
-struct node *add_node_front(struct node **head, int val);
 int print_node(struct node *head);
+struct node *add_node_front(struct node **head, int val);
+struct node *add_node_end(struct node **head, int val);
+int search_node(struct node *head, int key);
+void isfound(int flag);
 
 #endif /*LISTS_H*/
