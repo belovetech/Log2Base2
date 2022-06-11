@@ -23,5 +23,6 @@ s_lists *insert_at_beginning1(s_lists **head, int val);
 void print_listd(d_lists *head);
 d_lists *insert_at_beginning2(d_lists **head, int val);
 d_lists *insert_at_end2(d_lists **head, int val);
+void search_node(d_lists *head, int key);
 
 #endif  /*LISTS_H*/

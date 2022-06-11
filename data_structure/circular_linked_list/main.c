@@ -16,6 +16,8 @@ int main(void)
     insert_at_end2(&head, 400);
     insert_at_end2(&head, 500);
 
+    search_node(head, 500);
+    search_node(head, 600);
     print_listd(head);
 
     return (0);
