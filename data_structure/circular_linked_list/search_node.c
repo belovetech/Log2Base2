@@ -1,6 +1,11 @@
 #include "lists.h"
 
-
+/**
+ * search_node - search node in doubly linked list
+ * @key: key to find
+ *
+ * Return: Found otherwise Not found
+ */
 void search_node(d_lists *head, int key)
 {
     d_lists *temp = head;

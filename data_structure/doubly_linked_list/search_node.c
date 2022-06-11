@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ * search_node - search node in circular linked list
+ * @key: key to find
+ *
+ * Return: Found otherwise Not found
+ */
 int search_node(struct node *head, int key)
 {
     struct node *tmp = head;
