@@ -13,11 +13,13 @@ int main(void)
     printf("Enter two positive integers: ");
 	scanf("%d%d", &a, &b);
 
+	printf("Before.... %d %d\n", a, b);
+
 	tmp = a ^ b;
 	b = tmp ^ b;
 	a = tmp ^ a;
 
-	printf("%d %d\n", a, b);
+	printf("After..... %d %d\n", a, b);
 
 	return 0;
 }
