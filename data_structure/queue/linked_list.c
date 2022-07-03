@@ -10,8 +10,8 @@ struct node
 struct node *head = NULL;
 
 /**
- * push - Pushes element into the stack
- * @val: Value to push
+ * enqueue - Adds element to the queue
+ * @val: Value to add
  */
 
 void enqueue(int val)
@@ -38,7 +38,7 @@ void enqueue(int val)
 }
 
 /**
- * pop - Removes element from the stack
+ * dequeue - Removes element from the queue
  *
  * Return: -1 if list is empty otherwise the popped element
  */
@@ -65,7 +65,7 @@ int dequeue()
 
 
 /**
- * main -  Pushes and Pop some element from the stack
+ * main -  enqueue and dequeue some element from the queue
  *
  * Return: 0 always
  */
