@@ -50,14 +50,17 @@ void enqueue(int val)
  * dequeue - Removes element from the queue
  * @val: Value to add to queue
  */
-void dequeue()
+int dequeue()
 {
     if (is_empty())
-        printf("Queue is empty\n");
+    {
+        printf("Queue is empty: ");
+        return -1;
+    }
     else
     {
-        printf("Dequeue element: %d\n", queue[front]);
-        front++;
+        rear--;
+        return (queue[front++]);
     }
 }
 
@@ -70,9 +73,9 @@ int main(void)
 {
     enqueue(10);
     enqueue(20);
-    dequeue();
-    dequeue();
 
-    printf("\n");
+    printf("%d\n", dequeue());
+    printf("%d\n", dequeue());
+    printf("%d\n", dequeue());
     return (0);
 }

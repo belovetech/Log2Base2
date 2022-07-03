@@ -1,6 +1,6 @@
 # Queue Data Structure
 
-Implementation of `queue data structure using:
+Implementation of `queue data structure` using:
 - Array data structure
 - linked list data structure
 
