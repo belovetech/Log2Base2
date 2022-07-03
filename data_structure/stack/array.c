@@ -6,10 +6,10 @@ int top = -1;
 
 /**
  * is_empty - Checks if stack is empty
- * 
+ *
  * Return: 1 if it's empty otherwise 0
  */
- 
+
 int is_empty()
 {
     if (top == -1)
@@ -19,10 +19,10 @@ int is_empty()
 
 /**
  * is_full - Checks if stack is full
- * 
+ *
  * Return: 1 if it's full otherwise 0
  */
- 
+
 int is_full()
 {
     if (top == size - 1)
@@ -34,7 +34,7 @@ int is_full()
  * push - Pushes element into the stack
  * @val: Value to push
  */
- 
+
 int push(int val)
 {
     if (is_full())
@@ -51,7 +51,7 @@ int push(int val)
 
 /**
  * pop - Removes element from the stack
- * 
+ *
  * Return: -1 if list is empty otherwise the popped element
  */
 int pop()
@@ -78,16 +78,20 @@ int pop()
 void print_stack()
 {
     int i;
-
+    if (is_empty())
+    {
+        printf("Stack is Empty\n");
+        return;
+    }
     for (i = top; i >= 0; i--)
         printf("%d ", stack[i]);
 }
 /**
  * main -  Pushes and Pop some element from the stack
- * 
+ *
  * Return: 0 always (success)
  */
- 
+
 int main(void)
 {
     push(10);
@@ -97,8 +101,8 @@ int main(void)
     pop();
     pop();
     pop();
-    pop();
-    pop();
+    // print_stack();
+
 
     printf("\n");
     return (0);
