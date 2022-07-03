@@ -56,7 +56,7 @@ void dequeue()
         printf("Queue is empty\n");
     else
     {
-        printf("%d ", queue[front]);
+        printf("Dequeue element: %d\n", queue[front]);
         front++;
     }
 }
