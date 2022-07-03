@@ -1,6 +1,6 @@
 #include<stdio.h>
 /***
- * main - Disable nth bit of a given number using bitwise
+ * main - Toggle nth bit of a given number using bitwise
  */
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
 	scanf("%d%d", &num,&n);
 
 	//Write your code here
-    res = num & ~(1 << (n - 1));
+    res = num ^ (1 << (n - 1));
 
     printf("%d\n", res);
 
