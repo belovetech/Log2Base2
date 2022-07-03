@@ -2,9 +2,18 @@
 **Log2Base2** is a visual learning platform to learn `programming`, `data structures` & `algorithms`, 
 `Coding Interview Patterns`, `Recursion`,  and `Dynamic Programming`.
 
-## Programming Languages course in `Log2Base2`
+## Programming Language
 - C programming language
 - Python
+- Java
+
+
+## Pointer in C programming language
+- Array and Pointer
+- String and Pointer
+- Function Pointer
+- Struct and Pointer
+- File Pointer
 
 
 ## Problem solving for beginners
@@ -14,9 +23,10 @@
 - Patterns
 - Bitwise
 
-## Data structure
-- Array
-- Singly linked list
-- Doubly linked list
-- Circular linked list
-- Stack and Queue
+
+
+## Data structure & Algorithms
+- Data structure & Algorithms in C
+- Data structure & Algorithms in Python
+- Data structure & Algorithms in Java
+
