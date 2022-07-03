@@ -13,3 +13,4 @@ and others may require the inclusion of a library or module before the structure
     - Circular linked list
 - Stack data structure
 - Queue data structure
+- Binary search tree (BTS)
