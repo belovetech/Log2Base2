@@ -2,7 +2,7 @@
 **Log2Base2** is a visual learning platform to learn `programming`, `data structures` & `algorithms`, 
 `Coding Interview Patterns`, `Recursion`,  and `Dynamic Programming`.
 
-## Programming Language
+## Programming Languages
 - C programming language
 - Python
 - Java
@@ -22,7 +22,6 @@
 - String problems
 - Patterns
 - Bitwise
-
 
 
 ## Data structure & Algorithms
