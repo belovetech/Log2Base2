@@ -13,12 +13,15 @@ struct node *head = NULL;
  * push - Pushes element into the stack
  * @val: Value to push
  */
- 
+
 void push(int val)
 {
     struct node *newNode;
 
     newNode = malloc(sizeof(struct node));
+    if (newNode == NULL)
+        return;
+
     newNode->data = val;
     newNode->next = head;
     head = newNode;
@@ -26,17 +29,17 @@ void push(int val)
 
 /**
  * pop - Removes element from the stack
- * 
+ *
  * Return: -1 if list is empty otherwise the popped element
  */
- 
+
 int pop()
 {
     int data;
 
     if (head ==  NULL)
     {
-        printf("Stack Underflow\n");
+        printf("Stack Underflow: ");
         return (-1);
     }
     else
@@ -54,7 +57,7 @@ int pop()
  * print_stack - Prints elements of the stack
  * @val: Value to push
  */
- 
+
 void print_stack(struct node *head)
 {
     struct node *temp = head;
@@ -67,10 +70,10 @@ void print_stack(struct node *head)
 
 /**
  * main -  Pushes and Pop some element from the stack
- * 
- * Return: 0 always 
+ *
+ * Return: 0 always
  */
- 
+
 int main(void)
 {
     push(10);
