@@ -2,12 +2,14 @@
 int main(void)
 {
     struct node *root = NULL;
-    
-    root = getNewNode(10);
-    
-    if (root && root->left == NULL && root->right == NULL)
-        printf("%d\n", root->key);
-    
-    
+
+    root = insertNode(root, 100);
+    root = insertNode(root, 50);
+    root = insertNode(root, 150);
+    root = insertNode(root, 125);
+    root = insertNode(root, 10);
+
+    inorder(root);
+    printf("\n");
     return (0);
 }
