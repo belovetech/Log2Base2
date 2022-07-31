@@ -8,14 +8,14 @@
 struct node *getNewNode(int val)
 {
     struct node *newNode;
-    
+
     newNode = malloc(sizeof(struct node));
     if (newNode == NULL)
         return (NULL);
-        
+
     newNode->key = val;
     newNode->left = NULL;
     newNode->right = NULL;
-    
+
     return (newNode);
 }

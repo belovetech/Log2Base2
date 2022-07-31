@@ -1,4 +1,5 @@
 #include "bts.h"
+
 int main(void)
 {
     struct node *root = NULL;
@@ -12,12 +13,16 @@ int main(void)
 
     inorder(root);
     printf("\n");
-
-    res = search(root, 150);
+    
+    deleteNode(root, 100);
+    
+    res = searchNode(root, 150);
     if (res)
         printf("Key found\n");
     else
         printf("Key not found\n");
-    
+
+    inorder(root);
+    printf("\n");
     return (0);
 }
