@@ -20,4 +20,5 @@ struct node
 struct node *getNewNode(int val);
 struct node *insertNode(struct node *root, int val);
 void inorder(struct node *root);
+int search(struct node *root, int key);
 #endif /*BTS_H_*/
