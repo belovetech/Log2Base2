@@ -18,4 +18,6 @@ struct node
 };
 
 struct node *getNewNode(int val);
+struct node *insertNode(struct node *root, int val);
+void inorder(struct node *root);
 #endif /*BTS_H_*/
