@@ -1,13 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "bts.h"
 
-struct node
-{
-    int key;
-    struct node *left;
-    struct node *right;
-};
-
+/**
+ * getNewNode - create new node of bts
+ * @val: Value of the node created
+ * Return: pointer to the newNode
+ */
 struct node *getNewNode(int val)
 {
     struct node *newNode;
@@ -21,17 +18,4 @@ struct node *getNewNode(int val)
     newNode->right = NULL;
     
     return (newNode);
-}
-
-int main(void)
-{
-    struct node *root = NULL;
-    
-    root = getNewNode(10);
-    
-    if (root && root->left == NULL && root->right == NULL)
-        printf("%d\n", root->key);
-    
-    
-    return (0);
 }
