@@ -77,6 +77,11 @@ void printHasEdge(int value)
         printf("No edge found\n");
 }
 
+void removeEdge(int arr[][v], int src, int des)
+{
+    arr[src][des] = 0;
+}
+
 /**
  * main: Implentation of direct adjacency matrix
  *
@@ -98,5 +103,8 @@ int main(void)
 
     printHasEdge(hasEdge(adjMatrix, 0, 1));
     printAdjMatrix(adjMatrix);
+
+    removeEdge(adjMatrix, 0, 1);
+    printHasEdge(hasEdge(adjMatrix, 0, 1));
     return (0);
 }
