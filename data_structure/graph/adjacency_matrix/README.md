@@ -1,1 +1,1 @@
-# Implementation of adjacency matrix of graph
+# Implementation of directed and undirected djacency matrix of graph
