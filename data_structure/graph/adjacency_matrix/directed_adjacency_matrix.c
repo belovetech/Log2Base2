@@ -83,7 +83,7 @@ void removeEdge(int arr[][v], int src, int des)
 }
 
 /**
- * main: Implentation of direct adjacency matrix
+ * main: Implentation of directed adjacency matrix
  *
  * @Return: 0 always (success)
  */
@@ -93,18 +93,35 @@ int main(void)
 
     init(adjMatrix);
 
-    addEdge(adjMatrix, 0, 1);
-    addEdge(adjMatrix, 0, 2);
-    addEdge(adjMatrix, 0, 3);
-    addEdge(adjMatrix, 1, 3);
-    addEdge(adjMatrix, 1, 4);
-    addEdge(adjMatrix, 2, 3);
-    addEdge(adjMatrix, 3, 4);
+    printf("Adding Edge From 0 to 1\n");
+    addEdge(adjMatrix,0,1);
+    printf("Adding Edge From 0 to 2\n");
+    addEdge(adjMatrix,0,2);
+    printf("Adding Edge From 0 to 3\n");
+    addEdge(adjMatrix,0,3);
+    printf("Adding Edge From 1 to 3\n");
+    addEdge(adjMatrix,1,3);
+    printf("Adding Edge From 1 to 4\n");
+    addEdge(adjMatrix,1,4);
+    printf("Adding Edge From 2 to 3\n");
+    addEdge(adjMatrix,2,3);
+    printf("Adding Edge From 3 to 4\n");
+    addEdge(adjMatrix,3,4);
 
-    printHasEdge(hasEdge(adjMatrix, 0, 1));
+    printf("Adjacency Matrix Representation of the Graph\n");
     printAdjMatrix(adjMatrix);
 
-    removeEdge(adjMatrix, 0, 1);
-    printHasEdge(hasEdge(adjMatrix, 0, 1));
+    printf("Removing Edge(0, 2)..\n");
+    removeEdge(adjMatrix,0,2);
+
+    printf("Adjacency Matrix Representation of the Graph\n");
+    printAdjMatrix(adjMatrix);
+
+    printf("(0,1) has Edge?\n");
+    printHasEdge(hasEdge(adjMatrix,0, 1));
+    
+    printf("(0,2) has Edge?\n");
+    printHasEdge(hasEdge(adjMatrix,0, 2));
+ 
     return (0);
 }
