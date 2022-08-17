@@ -28,6 +28,7 @@ void init(int arr[][v])
 void addEdge(int arr[][v], int src, int des)
 {
     arr[src][des] = 1;
+    arr[des][src] = 1;
 }
 
 /**
@@ -59,7 +60,7 @@ void printAdjMatrix(int arr[][v])
  */
 int hasEdge(int arr[][v], int src, int des)
 {
-    if (arr[src][des] == 1)
+    if ((arr[src][des] == 1) || (arr[des][src] == 1))
         return (1);
 
     return (0);
@@ -80,6 +81,7 @@ void printHasEdge(int value)
 void removeEdge(int arr[][v], int src, int des)
 {
     arr[src][des] = 0;
+    arr[des][src] = 0;
 }
 
 /**
