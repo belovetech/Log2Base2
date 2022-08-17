@@ -54,8 +54,8 @@ void printAdjMatrix(int arr[][v])
  * @arr: Adjacency matrix array
  * @src: source of edge in adjacency matrix
  * @des: destination edge in adjacency matrix
- * 
- * @Return: 1 if found otherwise 
+ *
+ * @Return: 1 if found otherwise 0
  */
 int hasEdge(int arr[][v], int src, int des)
 {
@@ -64,6 +64,10 @@ int hasEdge(int arr[][v], int src, int des)
 
     return (0);
 }
+
+/**
+ * printHasEdge - Prints the result of hasEdge function
+ */
 
 void printHasEdge(int value)
 {
@@ -83,6 +87,7 @@ int main(void)
     int adjMatrix[v][v];
 
     init(adjMatrix);
+
     addEdge(adjMatrix, 0, 1);
     addEdge(adjMatrix, 0, 2);
     addEdge(adjMatrix, 0, 3);
