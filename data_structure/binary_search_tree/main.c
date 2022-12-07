@@ -4,6 +4,7 @@ int main(void)
 {
     struct node *root = NULL;
     int res;
+    int key = 100;
 
     root = insertNode(root, 100);
     root = insertNode(root, 50);
@@ -14,7 +15,8 @@ int main(void)
     inorder(root);
     printf("\n");
     
-    deleteNode(root, 100);
+    printf("Deleting key.....%d\n", key);
+    deleteNode(root, key);
     
     res = searchNode(root, 150);
     if (res)
