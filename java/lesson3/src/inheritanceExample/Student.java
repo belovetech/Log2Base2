@@ -8,9 +8,13 @@ public class Student extends Person{
         this.studentId = studentId;
     }
     
-    public String getStudentId() { return studentId; }
+    public String getStudentId() { 
+        return studentId; 
+    }
     
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public void setStudentId(String studentId) { 
+        this.studentId = studentId; 
+    }
     
     @Override
     public String  toString() {

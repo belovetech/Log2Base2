@@ -10,13 +10,21 @@ public class Person {
         this.lastName = lastName;
     }
     
-    public String getFirstName() { return firstName; }
+    public String getFirstName() {
+        return firstName; 
+    }
     
-    public void setFirstName(String firstname) { this.firstName = firstname; }
+    public void setFirstName(String firstname) { 
+        this.firstName = firstname; 
+    }
     
-    public String getLastName() { return lastName; }
+    public String getLastName() { 
+        return lastName; 
+    }
     
-    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setLastName(String lastName) { 
+        this.lastName = lastName; 
+    }
     
     @Override
     public String toString() {

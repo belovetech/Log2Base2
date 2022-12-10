@@ -10,15 +10,21 @@ public class StudentEmployee extends Student{
         this.employeeId = employeeId;
     }
     
-    public double getRateOfPayPerHour() { return rateOfPayPerHour; }
+    public double getRateOfPayPerHour() { 
+        return rateOfPayPerHour; 
+    }
     
     public void setRateOfPayPerHour(double rateOfPayPerHour) {
         this.rateOfPayPerHour = rateOfPayPerHour; 
     }
     
-    public String getEmployeeId() { return employeeId; }
+    public String getEmployeeId() { 
+        return employeeId; 
+    }
     
-    public void setEmloyeeId(String employeeId) { this.employeeId = employeeId; }
+    public void setEmloyeeId(String employeeId) { 
+        this.employeeId = employeeId; 
+    }
     
     @Override
     public String toString() {
