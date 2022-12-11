@@ -29,26 +29,26 @@ void printAdjMatrix(int adjMatrix[][V]) {
 }
 
 /**
- * addEdges - Add edges to adjacency matrix (undirected graph)
+ * addEdge - Add edges to adjacency matrix (undirected graph)
  * 
  * @adjMatrix: Two dimensional array representing vectics and edges
  * @src: Row in adjacency matrix to add edges
  * @dest: Column in adjacency matrix add edges
  */
-void addEdges(int adjMatrix[][V], int src, int dest)
+void addEdge(int adjMatrix[][V], int src, int dest)
 {
     adjMatrix[src][dest] = 1;
     adjMatrix[dest][src] = 1;
 }
 
 /**
- * hashEdges - Check edges in adjacency matrix
+ * hasEdge - Check edges in adjacency matrix
  * 
  * @adjMatrix: Two dimensional array representing vectics and edges
  * @src: Row in adjacency matrix to check
  * @dest: Column in adjacency matrix to check
  */
-int hashEdges(int adjMatrix[][V], int src, int dest)
+int hasEdge(int adjMatrix[][V], int src, int dest)
 {
     if (adjMatrix[src][dest] == 1) return (1);
     return (0);
@@ -56,13 +56,13 @@ int hashEdges(int adjMatrix[][V], int src, int dest)
 
 
 /**
- * removeEdges - Remove edges from adjacency matrix
+ * removeEdge - Remove edges from adjacency matrix
  * 
  * @adjMatrix: Two dimensional array representing vectics and edges
  * @src: Row in adjacency matrix to check
  * @dest: Column in adjacency matrix to check
  */
-void removeEdges(int adjMatrix[][V], int src, int dest)
+void removeEdge(int adjMatrix[][V], int src, int dest)
 {
     adjMatrix[src][dest] = 0;
     adjMatrix[dest][src] = 0;
@@ -73,15 +73,42 @@ int main(void)
     int adjMatrix[V][V];
     
     initAdjMatrix(adjMatrix);
-    addEdges(adjMatrix, 0, 1);
-    addEdges(adjMatrix, 0, 2);
-    addEdges(adjMatrix, 0, 3);
-    addEdges(adjMatrix, 1, 3);
-    addEdges(adjMatrix, 1, 4);
-    addEdges(adjMatrix, 2, 3);
-    addEdges(adjMatrix, 3, 4);
+    printf("Adding Edge From 0 to 1\n");
+    addEdge(adjMatrix, 0, 1);
+    printf("Adding Edge From 0 to 2\n");
+    addEdge(adjMatrix, 0, 2);
+    printf("Adding Edge From 0 to 3\n");
+    addEdge(adjMatrix, 0, 3);
+    printf("Adding Edge From 1 to 3\n");
+    addEdge(adjMatrix, 1, 3);
+    printf("Adding Edge From 1 to 4\n");
+    addEdge(adjMatrix, 1, 4);
+    printf("Adding Edge From 2 to 3\n");
+    addEdge(adjMatrix, 2, 3);
+    printf("Adding Edge From 3 to 4\n");
+    addEdge(adjMatrix, 3, 4);
     // removeEdges(adjMatrix, 3, 4);
+    
+    printf("Adjacency Matrix Representation of the Graph\n");
     printAdjMatrix(adjMatrix);
+    
+    printf("Removing Edge(0, 2)..\n");
+    removeEdge(adjMatrix,0,2);
+
+    printf("Adjacency Matrix Representation of the Graph\n");
+    printAdjMatrix(adjMatrix);
+
+    printf("(0,1) has Edge?\n");
+    if(hasEdge(adjMatrix,0, 1) == 1)
+        printf("Edge Found\n");
+    else
+        printf("Edge Not Found\n");
+
+    printf("(0,2) has Edge?\n");
+    if(hasEdge(adjMatrix,0, 2) == 1)
+        printf("Edge Found\n");
+    else
+        printf("Edge Not Found\n");
     
     return (0);
 }
