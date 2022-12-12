@@ -3,6 +3,33 @@
 void buildHeap(int arr[], int size);
 void swap(int *a, int *b);
 void heapify(int arr[], int index, int size);
+void deleteMax(int arr[], int *size);
+
+/**
+ * deleteMax - Delete Max in binary heap
+ * 
+ * @arr: Array element to construct to heap
+ * @size: Size of the array
+ */
+
+void deleteMax(int arr[], int *size)
+{
+    int end = *size;
+    
+    // swap the first element with the last element
+    swap(&arr[0], &arr[end]); 
+    
+    printf("Max Deleted %d\n", arr[end]);
+    
+    // Decrease size of the array
+    end = end - 1;
+    
+    // update the original size
+    *size =  end;
+    
+    // heapify the remaining array element
+    heapify(arr, 0, end);
+}
 
 /**
  * buildHeap - Build heap from array element
@@ -91,6 +118,16 @@ int main(void)
     printf("Constructing Heap...\n");
     buildHeap(arr, size-1);
     
+    printf("The Array Elements Are:\n");
+    printArray(arr, size);
+    
+    deleteMax(arr, &size);
+
+    printf("The Array Elements Are:\n");
+    printArray(arr, size);
+
+    deleteMax(arr, &size);
+
     printf("The Array Elements Are:\n");
     printArray(arr, size);
     
