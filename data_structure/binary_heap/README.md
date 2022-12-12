@@ -14,3 +14,4 @@ A complete tree ia a full tree in which the last level may contain lesser nodes 
 
 - left node = `2 * i + 1`
 - right node = `2 * i + 2`
+  i == index
