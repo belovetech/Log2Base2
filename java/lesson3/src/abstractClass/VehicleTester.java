@@ -1,4 +1,4 @@
-package abstractClass;
+package lesson3.src.abstractClass;
 
 public class VehicleTester {
     
