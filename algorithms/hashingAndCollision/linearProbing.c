@@ -23,21 +23,21 @@ void printArray()
 }
 
 /**
- * insertLinearProbing - Insert into hash table using linear probing
+ * insert - Insert into hash table using linear probing
  * 
  * @value: Value to be inserted
  * @size: Size of the hash table
  * Return: (1) for succesful insertion otherwise (0) 
  */
 
-int insertLinearProbing(int value, int size)
+int insert(int value, int size)
 {
     int key = value % size;
     int index = key;
     
     while (arr[index] != -1)
     {
-        // Go to the available space
+        // Go to the next available space
         index = (index + 1) % size;
         
         if (key == index)
@@ -51,18 +51,47 @@ int insertLinearProbing(int value, int size)
 }
 
 
+int delete(int value, int size)
+{
+    int key = value % size;
+    int index = key;
+    
+    while (arr[index] != value)
+    {
+        // Go to the next available space
+        index = (index + 1) % size;
+        
+        if (key == index)
+        {
+            printf("Ops! %d not found in the hash table.\n", value);
+            return (0);
+        }
+    }
+    arr[index] = -1;
+
+    return (1);
+}
+
 
 int main(void)
 {
     // Initialize all element in the array to (-1)
     init();
     
-    // Linear probing
-    insertLinearProbing(4, SIZE);
-    insertLinearProbing(5, SIZE);
-    insertLinearProbing(10, SIZE);
-    insertLinearProbing(12, SIZE);
-    insertLinearProbing(25, SIZE);
+    // Insert into hash table using Linear probing
+    insert(4, SIZE);
+    insert(5, SIZE);
+    insert(10, SIZE);
+    insert(12, SIZE);
+    insert(25, SIZE);
+    
+    // Print array elements
+    printArray();
+    
+    // Delete value from hash table using Linear probing
+    int key = 4;
+    printf("Deleting %d..........\n", key);
+    delete(key, SIZE);
     
     // Print array elements
     printArray();
