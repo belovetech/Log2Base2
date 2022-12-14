@@ -23,14 +23,14 @@ void printArray()
 }
 
 /**
- * linearProbing - Insert into hash table using linear probing
+ * insertLinearProbing - Insert into hash table using linear probing
  * 
  * @value: Value to be inserted
  * @size: Size of the hash table
  * Return: (1) for succesful insertion otherwise (0) 
  */
 
-int linearProbing(int value, int size)
+int insertLinearProbing(int value, int size)
 {
     int key = value % size;
     int index = key;
@@ -58,11 +58,11 @@ int main(void)
     init();
     
     // Linear probing
-    linearProbing(4, SIZE);
-    linearProbing(5, SIZE);
-    linearProbing(10, SIZE);
-    linearProbing(12, SIZE);
-    linearProbing(25, SIZE);
+    insertLinearProbing(4, SIZE);
+    insertLinearProbing(5, SIZE);
+    insertLinearProbing(10, SIZE);
+    insertLinearProbing(12, SIZE);
+    insertLinearProbing(25, SIZE);
     
     // Print array elements
     printArray();
