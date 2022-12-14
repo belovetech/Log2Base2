@@ -50,6 +50,13 @@ int insert(int value, int size)
     return (1);    
 }
 
+/**
+ * delete - delete into hash table using linear probing
+ * 
+ * @value: Value to be deleted
+ * @size: Size of the hash table
+ * Return: (1) for succesful deletion otherwise (0) 
+ */
 
 int delete(int value, int size)
 {
@@ -69,6 +76,32 @@ int delete(int value, int size)
     }
     arr[index] = -1;
 
+    return (1);
+}
+
+
+
+/**
+ * search - Search for value in hash table using linear probing
+ * 
+ * @value: Value to be searched
+ * @size: Size of the hash table
+ * Return: (1) if found otherwise (0) 
+ */
+
+int search(int value, int size)
+{
+    int key = value % size;
+    int index = key;
+    
+    while (arr[index] != value)
+    {
+        // Go to the next available space
+        index = (index + 1) % size;
+        
+        if (key == index)
+            return (0);
+    }
     return (1);
 }
 
@@ -95,6 +128,19 @@ int main(void)
     
     // Print array elements
     printArray();
+    
+    // Search value from hash table using Linear probing
+    printf("Searching for 4..........\n");
+    if (search(4, SIZE))
+        printf("Key found\n");
+    else
+        printf("Key not found\n");
+    
+    printf("Searching for 10..........\n");
+    if (search(10, SIZE))
+        printf("Key found\n");
+    else
+        printf("Key not found\n");
     
     return (0);
 }
