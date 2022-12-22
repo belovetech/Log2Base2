@@ -79,8 +79,6 @@ int delete(int value, int size)
     return (1);
 }
 
-
-
 /**
  * search - Search for value in hash table using linear probing
  * 
