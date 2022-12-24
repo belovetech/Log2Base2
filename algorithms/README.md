@@ -3,4 +3,6 @@
 - Searching Algorithms
 - Sorting Algorithms
 - Hashing and Collision
-- Binary Heap
+- Greedy Algorithms
+- Dynamic Programming
+- Graph Traversal
