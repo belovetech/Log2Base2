@@ -39,3 +39,11 @@ QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and 
 - Time Complexity - O(nlogn)
 - Space Complexity - O(n)
 - Auxilliary space - O(1)
+
+## Merge sort
+
+The Merge Sort algorithm is a sorting algorithm that is based on the Divide and Conquer paradigm. In this algorithm, the array is initially divided into two equal halves and then they are combined in a sorted manner.
+
+- Time Complexity - O(nlogn)
+- Space Complexity - O(n)
+- Auxilliary space - O(n)
