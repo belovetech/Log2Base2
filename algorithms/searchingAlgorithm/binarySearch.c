@@ -50,9 +50,9 @@ int recursiveBinarySearch(int arr[], int key, int start, int end)
     if (arr[mid] == key)
         return (1);
     else if (arr[mid] > key)
-        recursiveBinarySearch(arr, key, start, mid - 1);
+        return recursiveBinarySearch(arr, key, start, mid - 1);
     else
-        recursiveBinarySearch(arr, key, mid + 1, end);
+        return recursiveBinarySearch(arr, key, mid + 1, end);
 }
 
 
