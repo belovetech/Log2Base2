@@ -1,8 +1,13 @@
 #include "queue.h"
 
-#define V 5
+#define V 5 // Define size of vertices
 
-
+/**
+ * BFS - Breadth first search graph traversal 
+ * 
+ * @arr: Adajcency matrix representation of graph
+ * @source: First vertice in the graph
+ */
 void BFS(int arr[][V], int source)
 {
     int isVisited[V] = {0};
