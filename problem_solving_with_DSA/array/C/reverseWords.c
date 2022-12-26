@@ -31,7 +31,7 @@ void reverse(char str[], int start, int end)
 }
 
 /**
- * reverse_words - Reverse words 
+ * reverse_words - Reverse individual words 
  * 
  * @str: Words to reverse 
  */

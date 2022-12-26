@@ -29,7 +29,7 @@ def reverse(str, start, end):
     
 
 def reverseWords(str):
-    """ Reverse each word in str
+    """ Reverse individual words
     Args:
         str (str): The string to reverse its words
     """
