@@ -21,7 +21,7 @@ def arrayRotate(arr,n,k):
     Args:
         arr (arr[int]) - Array to rotate
         n (int): Size of the array
-        k (int): Rotation position
+        k (int): Number of times the array needs to be rotated
     """
     if n <= 1:
         return

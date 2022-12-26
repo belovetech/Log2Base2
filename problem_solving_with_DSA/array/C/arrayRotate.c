@@ -18,7 +18,7 @@ void swap(int *a, int *b)
  * 
  * @arr: Array to rotate
  * @n: Size of the array
- * @k: Rotation position
+ * @k: Number of times the array needs to be rotated
  */
 void rotateArray(int arr[], int n, int k)
 {
