@@ -1,5 +1,5 @@
 """
-Rotate Array by K position
+Rotate Array by K position using normal method and reverse method
 """
 def rightRotate(arr, n):
     """ Shift Array to the right side by 1 position
@@ -16,7 +16,7 @@ def rightRotate(arr, n):
         
 
 def arrayRotate(arr,n,k):
-    """ Rotate array by k Position
+    """ Rotate array by k Position using normal methods
     
     Args:
         arr (arr[int]) - Array to rotate
@@ -29,6 +29,31 @@ def arrayRotate(arr,n,k):
         rightRotate(arr, n)
         k -= 1
         
+def reverse(arr, start, end):
+    """ Reverse arary elements
+    
+    Args:
+        arr (arr[int]) - Array to rotate
+        start (int): First index of the array
+        end (int): Last index of the array
+    """
+    while start < end:
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
+
+def arrayRotate2(arr,n,k):
+    """ Rotate array by k Position using normal methods
+    
+    Args:
+        arr (arr[int]) - Array to rotate
+        n (int): Size of the array
+        k (int): Number of times the array needs to be rotated
+    """
+    reverse(arr, 0, n-k-1)
+    reverse(arr, n-k, n-1)
+    reverse(arr, 0, n-1)        
+
 def printArray(arr, n):
     """Print array
     
@@ -51,7 +76,7 @@ if __name__ == '__main__':
     printArray(arr, len)
     
     k = int(input("Enter Rotation position\n"))
-    arrayRotate(arr, len, k);
+    arrayRotate2(arr, len, k);
     
     print("<<<After rotation>>>")
     printArray(arr, len)

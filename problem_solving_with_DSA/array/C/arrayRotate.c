@@ -14,7 +14,7 @@ void swap(int *a, int *b)
 }
 
 /**
- * rotateArray - Rotate array by K position
+ * rotateArray - Rotate array by K position using normal method
  * 
  * @arr: Array to rotate
  * @n: Size of the array
@@ -53,6 +53,38 @@ void printArray(int arr[], int n)
 }
 
 
+/**
+ * reverse - Reverse array elements 
+ * 
+ * @arr: Array to reverse
+ * @start: First index of the array
+ * @end: Last index of the array
+ */
+void reverse(int arr[], int start, int end)
+{
+    while (start < end)
+    {
+       int temp = arr[start];
+       arr[start++] = arr[end];
+       arr[end--] = temp;
+    }
+}
+
+/**
+ * rotateArray - Rotate array by K position using reverse method
+ * 
+ * @arr: Array to rotate
+ * @n: Size of the array
+ * @k: Number of times the array needs to be rotated
+ */
+void arrayRotate(int arr[], int n, int k)
+{
+    reverse(arr, 0, n-k-1);
+    reverse(arr, n-k, n-1);
+    reverse(arr, 0, n-1); 
+}
+
+
 int main(void)
 {
     int arr[] = {1, 2, 3, 4, 5};
@@ -64,7 +96,8 @@ int main(void)
     printf("Before Rotation...\n");
     printArray(arr, size);
     
-    rotateArray(arr, size, k);
+    // rotateArray(arr, size, k);
+    arrayRotate(arr, size, k);
     
     printf("After Rotation...\n");
     printArray(arr, size);
