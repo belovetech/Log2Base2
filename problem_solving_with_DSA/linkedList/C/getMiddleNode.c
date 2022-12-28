@@ -50,25 +50,6 @@ int getMiddleNode(lNode *head)
    return (-1);
 }
 
-/**
- * getMiddleNode2 - Get the Middle Node object using slow and fast pointer
- * 
- * @head: Head pointer of the Linked list 
- * Return: The data of the node in the middle
- */
-int getMiddleNode2(struct node *head)
-{
-    struct node *slow, *fast;
-    
-    slow = fast = head;
-    
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    return slow->data;
-}
 
 /**
  * insertAtEnd - Insert a new node to the back of a linked list
