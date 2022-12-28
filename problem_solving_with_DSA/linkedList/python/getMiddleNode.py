@@ -50,7 +50,7 @@ class LinkedList:
         return count
 
     def getMiddleNode(self):
-        """Get middle node in a linked list"""
+        """Get middle node in a linked list using loop"""
         len = self.countNode()
         temp = self.head
         
@@ -60,6 +60,19 @@ class LinkedList:
             return temp.data
         else:
             return (-1)
+            
+    def getMiddleNode2(self):
+        """Get middle node in a linked list using slow and fast pointer"""
+        slow = fast = self.head
+        
+        if  self.head != None:
+            while fast and fast.next:
+                slow = slow.next
+                fast = fast.next.next
+            return slow.data
+        return (-1)
+        
+        
 
 
 if __name__ == "__main__":
@@ -72,3 +85,4 @@ if __name__ == "__main__":
     
     llist.printLinkedList()
     print(llist.getMiddleNode())
+    print(llist.getMiddleNode2())
