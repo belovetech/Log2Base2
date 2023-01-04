@@ -64,8 +64,8 @@ int main(void)
     push(&head, 'D');
     push(&head, 'A');
     
+    // Create a loop
     head->next->next->next->next = head;
-
     
     printf("%d\n", hasLoop(head));
     
