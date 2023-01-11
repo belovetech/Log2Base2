@@ -1,3 +1,5 @@
+"""Reverse string using stack data structure"""
+
 size = 10
 stack = ['' for _ in range(size)]
 top = -1
