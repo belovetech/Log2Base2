@@ -24,17 +24,17 @@ int removeElement(int arr[], int n, int val)
 
 int main(void)
 {
-    int arr[] = {1,5,5,3,5};
-    int val = 5;
+    int arr[] = {4,7,6,7,8,7,7};
+    int val = 7;
     int size = sizeof(arr) / sizeof(arr[0]);
 
     int newLen = removeElement(arr, size, val);
 
     printf("%d\n", newLen);
 
-    // for (int i = 0; i < newLen; i++)
-    //     printf("%d ", arr[i]);
-    // printf("\n");
+    for (int i = 0; i < newLen; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
 
     return (0);
 }
