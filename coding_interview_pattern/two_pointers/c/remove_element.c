@@ -14,7 +14,9 @@ int removeElement(int arr[], int n, int val)
     for (i = 0; i < n; i++)
     {
         if (arr[i] != val)
-            newLen++;
+        {
+            arr[newLen++] = arr[i];
+        }
     }
     return newLen;
 }
@@ -29,5 +31,10 @@ int main(void)
     int newLen = removeElement(arr, size, val);
 
     printf("%d\n", newLen);
+
+    // for (int i = 0; i < newLen; i++)
+    //     printf("%d ", arr[i]);
+    // printf("\n");
+
     return (0);
 }
