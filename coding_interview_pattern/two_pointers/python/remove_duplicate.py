@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""remove occurence of value in array
-then return the new length
+"""remove duplicate in a sorted array
 """
 from typing import List
 
@@ -22,7 +21,7 @@ def removeDuplicate(arr: List[int], n: int) -> int:
 
 
 if __name__ == "__main__":
-    arr = [1,1,1,3,3,5,5]
+    arr = [1,1,1,3,3,5]
     size = len(arr)
 
     print(arr)
