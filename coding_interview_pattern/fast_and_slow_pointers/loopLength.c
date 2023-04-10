@@ -1,5 +1,11 @@
 #include "fast_slow.h"
 
+/**
+ * loopLength - find the length of a loop in th linked list
+ *
+ * @head: Pointer to the head of the linked list
+ * Return: Length of the loop or zero
+ */
 int loopLength(struct node *head)
 {
     struct node *slow, *fast;
@@ -18,6 +24,12 @@ int loopLength(struct node *head)
     return 0;
 }
 
+/**
+ * calculateLoopLength - Calculate the length of the loop in Linked list
+ *
+ * @slow: Pointer to where the loop was caught
+ * Return Length of the loop or zero
+ */
 int calculateLoopLength(struct node *slow)
 {
     struct node *current = slow;
