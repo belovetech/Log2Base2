@@ -14,5 +14,7 @@ struct node
 void printNode(struct node *head);
 int hasLoop(struct node *head);
 int getMiddleNode(struct node *head);
+int loopLength(struct node *head);
+int calculateLoopLength(struct node *slow);
 
 #endif /*_FAST_SLOW_H_*/
