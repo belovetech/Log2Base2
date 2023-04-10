@@ -5,16 +5,18 @@
 /*
 ** Definition for a linked list node.
 */
-struct node
+typedef struct node
 {
    int data;
    struct node *next;
-};
+}lNode;
 
-void printNode(struct node *head);
-int hasLoop(struct node *head);
-int getMiddleNode(struct node *head);
-int loopLength(struct node *head);
-int calculateLoopLength(struct node *slow);
+void printNode(lNode *head);
+int hasLoop(lNode *head);
+int getMiddleNode(lNode *head);
+int loopLength(lNode *head);
+int calculateLoopLength(lNode *slow);
+lNode *findLoopStart(lNode *head);
+lNode *getLoopStart(lNode *head, lNode *slow, lNode *fast);
 
 #endif /*_FAST_SLOW_H_*/

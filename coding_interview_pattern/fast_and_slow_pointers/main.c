@@ -18,7 +18,7 @@ int main(void)
     h2->next = h3;
     h3->next = h4;
     h4->next = h5;
-    h5->next = h2;
+    h5->next = h4;
 
     // printNode(h1);
     // printf("%d\n", getMiddleNode(h1));
@@ -29,7 +29,9 @@ int main(void)
     // else
     //     printf("Linked list does not has a loop\n");
 
-    printf("%d\n", loopLength(h1));
+    // printf("%d\n", loopLength(h1));
+    lNode *res = findLoopStart(h1);
+    printf("%d\n", res->data);
 
     return (0);
 }
