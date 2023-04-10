@@ -4,7 +4,7 @@
  * findLoopStart - find the loop start in the linked list
  *
  * @head: Pointer to the head of the linked list
- * Return: Length of the loop or zero
+ * Return: pointer to the start of the loop
  */
 lNode *findLoopStart(lNode *head)
 {
