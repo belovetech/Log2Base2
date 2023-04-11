@@ -23,13 +23,6 @@ lNode *findLoopStart(lNode *head)
     }
 }
 
-/**
- * getLoopStart - find the start of a linked list loop
- * @head: Head pointer
- * @slow: Pointer to where the loop was caught
- * @fast: Pointer to where the loop was detected
- * Return: pointer to the start of the loop
- */
 lNode *getLoopStart(lNode *head, lNode *slow, lNode *fast)
 {
     slow = head;

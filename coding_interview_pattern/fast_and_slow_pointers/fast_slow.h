@@ -18,5 +18,6 @@ int loopLength(lNode *head);
 int calculateLoopLength(lNode *slow);
 lNode *findLoopStart(lNode *head);
 lNode *getLoopStart(lNode *head, lNode *slow, lNode *fast);
+int isHappyNumber(int num);
 
 #endif /*_FAST_SLOW_H_*/
