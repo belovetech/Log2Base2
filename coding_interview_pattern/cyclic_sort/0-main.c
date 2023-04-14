@@ -7,7 +7,7 @@ int main(void)
 
     printf("Before Cyclic Sort\n");
     printArray(arr, size);
-    cyclicSort(arr, size);
+    cyclicSort2(arr, size);
     printf("After Cyclic Sort\n");
     printArray(arr, size);
 
